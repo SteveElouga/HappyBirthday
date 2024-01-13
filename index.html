@@ -4,24 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joyeux Anniversaire</title>
+    <title>Welcome</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/img/OIP (1).jpg" type="image/x-icon">
+    <script src="assets/js/form.js" defer></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="assets/js/script.js" defer></script>
 </head>
 
-<body class="overflow-hidden">
-    <section class="flex justify-center items-center h-screen bg-[#f1f1f1]" id="parent">
-        <div class="absolute top-[20px] text-[25px] animate-bounce text-center leading-4">Click On Me <br> <ion-icon name="arrow-down" class="mt-5 animate-bounce w-6 h-6"></ion-icon></div>
-        <div data-aos="fade-down" class="box absolute w-[450px] h-[450px] flex justify-center items-center" >
-            <div class="circle relative w-full h-full bg-gradient-to-br from-white to-[#e4e3e8] flex justify-center items-center rounded-full z-10 hover:cursor-pointer active:w-[440px] active:h-[440px] transition-all duration-300 ease-in-out "
-                id="circle">
-                <h2 class="absolute z-20 text-[4em] text-[#ff2a2a] text-center">Happy Birthday <br><span id="span"></span></h2>
+<body class="w-screen h-screen bg-cover bg-center"
+    style="background-image: url('assets/img/colorful-balloons-birthday-decoration-5k-8k-7731x5157-1120.jpg');">
+    <div class="w-full h-full  flex flex-col justify-center items-center">
+        <h1 class="font-semibold text-white text-[20px]" data-aos="fade-right" data-aos-delay="500">Bienvenue</h1>
+        <form action="#"
+            class="bg-transpar w-[400px] h-[120px] rounded-lg backdrop px-[10px] flex justify-center items-center" data-aos="fade-left">
+            <div
+                class="relative w-full h-[50px] border-b-2 border-white input-box flex justify-center items-center">
+                <span class="absolute top-[10px] right-0 text-[1.2em] leading-[57px] text-white"><ion-icon name="person-outline"></ion-icon></span>
+                <input type="text" name="text" id="text"
+                    class="w-[90%] border-none outline-none absolute left-0 top-[40%]  monInput pl-2 h-[30px] bg-transparent text-white" required>
+
+                <label for="email"
+                    class="absolute  left-0 top-[40%]  pointer-events-none transition-all duration-300 ease-in-out font-semibold text-white" id="labelMonInput">Name</label>
             </div>
-        </div>
-    </section>
+            
+            <button type="button" class="border-2 border-white rounded-md w-[100px] flex justify-center items-center font-semibold text-white ml-[20px] mb-[-25px]" id="bouton" onclick="redirigerVersPageSuivante()"><span>Valider</span></button>
+        </form>
+    </div>
 
     <div class="spinner-container fixed top-0 left-0 w-full h-full bg-white bg-opacity-80 flex justify-center items-center">
         <div class="border-4 border-solid border-gray-900 border-t-4 border-t-gray-200 rounded-full w-10 h-10 animate-spin"></div>
@@ -33,6 +41,15 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+
+    <script>
+        function redirigerVersPageSuivante() {
+            var valeur = document.getElementById('text').value;
+
+            console.log(valeur)
+            document.cookie = valeur;
+        }
     </script>
 </body>
 

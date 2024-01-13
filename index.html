@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyeux Anniversaire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/OIP (1).jpg" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body class="overflow-hidden">
+    <section class="flex justify-center items-center h-screen bg-[#f1f1f1]" id="parent">
+        <div class="absolute top-[20px] text-[25px] animate-bounce text-center leading-4">Click On Me <br> <ion-icon name="arrow-down" class="mt-5 animate-bounce w-6 h-6"></ion-icon></div>
+        <div data-aos="fade-down" class="box absolute w-[450px] h-[450px] flex justify-center items-center" >
+            <div class="circle relative w-full h-full bg-gradient-to-br from-white to-[#e4e3e8] flex justify-center items-center rounded-full z-10 hover:cursor-pointer active:w-[440px] active:h-[440px] transition-all duration-300 ease-in-out "
+                id="circle">
+                <h2 class="absolute z-20 text-[4em] text-[#ff2a2a] text-center">Happy Birthday <br><span id="span"></span></h2>
+            </div>
+        </div>
+    </section>
+
+    <div class="spinner-container fixed top-0 left-0 w-full h-full bg-white bg-opacity-80 flex justify-center items-center">
+        <div class="border-4 border-solid border-gray-900 border-t-4 border-t-gray-200 rounded-full w-10 h-10 animate-spin"></div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

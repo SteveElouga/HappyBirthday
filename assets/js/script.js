@@ -49,3 +49,5 @@ console.log(cookie)
 
 message.textContent = cookie;
 
+cookie = ""
+

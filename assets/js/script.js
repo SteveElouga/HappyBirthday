@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const message = document.getElementById('span');
-var cookie = document.cookie
+const cookie = document.cookie
 console.log(cookie)
 
 message.textContent = cookie;

@@ -19,9 +19,8 @@ document.getElementById('bouton').addEventListener('click', function () {
         errorMessage.style.fontSize = '12px';
         errorMessage.style.bottom = '-50%';
         errorMessage.style.left = '0%';
+        
         noms.parentNode.appendChild(errorMessage);
-
-        bouton.style.cursor = none
     }else{
         window.location.href = 'hbirthday.html';
     }
